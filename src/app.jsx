@@ -1,5 +1,5 @@
+import { isAndroid } from '@constants/platforms';
 import { RootNavigator } from '@navigation/root-navigator';
-import { AppStoreProvider } from '@store/provider';
 import i18n from 'i18next';
 import { useEffect } from 'react';
 import { I18nextProvider } from 'react-i18next';
@@ -8,16 +8,19 @@ import SplashScreen from 'react-native-splash-screen';
 
 const App = () => {
     useEffect(() => {
-        SplashScreen.hide(); // Hides the splash screen after loading
+        setTimeout(
+            () => {
+                SplashScreen.hide();
+            },
+            isAndroid ? 1500 : 0,
+        );
     }, []);
 
     return (
         <SafeAreaProvider>
-            <AppStoreProvider>
-                <I18nextProvider i18n={i18n}>
-                    <RootNavigator />
-                </I18nextProvider>
-            </AppStoreProvider>
+            <I18nextProvider i18n={i18n}>
+                <RootNavigator />
+            </I18nextProvider>
         </SafeAreaProvider>
     );
 };

@@ -2977,15 +2977,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/csf@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@storybook/csf@npm:0.0.1"
-  dependencies:
-    lodash: ^4.17.15
-  checksum: fb57fa028b08a51edf44e1a2bf4be40a4607f5c6ccb58aae8924f476a42b9bbd61a0ad521cfc82196f23e6a912caae0a615e70a755e6800b284c91c509fd2de6
-  languageName: node
-  linkType: hard
-
 "@svgr/babel-plugin-add-jsx-attribute@npm:8.0.0":
   version: 8.0.0
   resolution: "@svgr/babel-plugin-add-jsx-attribute@npm:8.0.0"
@@ -3686,7 +3677,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:5.62.0, @typescript-eslint/utils@npm:^5.10.0, @typescript-eslint/utils@npm:^5.62.0":
+"@typescript-eslint/utils@npm:5.62.0, @typescript-eslint/utils@npm:^5.10.0":
   version: 5.62.0
   resolution: "@typescript-eslint/utils@npm:5.62.0"
   dependencies:
@@ -6037,20 +6028,6 @@ __metadata:
   peerDependencies:
     eslint: ">=5.0.0"
   checksum: 6d73e43ecf6221c1952e0cc820e6867e3e1fe973575e23d438d1d3de52284ceb2a01d31e20a76de11feb158bbba98f113150a676cc5526a8b3a5844d63ca37f8
-  languageName: node
-  linkType: hard
-
-"eslint-plugin-storybook@npm:^0.8.0":
-  version: 0.8.0
-  resolution: "eslint-plugin-storybook@npm:0.8.0"
-  dependencies:
-    "@storybook/csf": ^0.0.1
-    "@typescript-eslint/utils": ^5.62.0
-    requireindex: ^1.2.0
-    ts-dedent: ^2.2.0
-  peerDependencies:
-    eslint: ">=6"
-  checksum: 71e4b064259e09a6353360ca4a3ec929df0ea3aabe1dc83a40b9264fe5c16bcecb94d097e7403f6916622b8fdb739e91f1268bbad220d838fcbc2b9a901345ec
   languageName: node
   linkType: hard
 
@@ -8539,7 +8516,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.15, lodash@npm:^4.17.21":
+"lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -9644,7 +9621,6 @@ __metadata:
     eslint-plugin-promise: ^7.1.0
     eslint-plugin-react-native: 4.1.0
     eslint-plugin-simple-import-sort: ^12.1.1
-    eslint-plugin-storybook: ^0.8.0
     i18next: ^23.14.0
     jest: ^29.7.0
     jest-environment-jsdom: ^29.7.0
@@ -9655,9 +9631,9 @@ __metadata:
     react-dom: 18.3.1
     react-i18next: ^15.0.1
     react-native: 0.75.3
-    react-native-gesture-handler: ^2.19.0
+    react-native-gesture-handler: 2.19.0
     react-native-reanimated: ^3.15.2
-    react-native-safe-area-context: ^4.11.0
+    react-native-safe-area-context: 4.7.1
     react-native-screens: ^3.34.0
     react-native-splash-screen: ^3.3.0
     react-native-svg: 15.6.0
@@ -10230,7 +10206,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-gesture-handler@npm:^2.19.0":
+"react-native-gesture-handler@npm:2.19.0":
   version: 2.19.0
   resolution: "react-native-gesture-handler@npm:2.19.0"
   dependencies:
@@ -10268,13 +10244,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-safe-area-context@npm:^4.11.0":
-  version: 4.11.0
-  resolution: "react-native-safe-area-context@npm:4.11.0"
+"react-native-safe-area-context@npm:4.7.1":
+  version: 4.7.1
+  resolution: "react-native-safe-area-context@npm:4.7.1"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 6d6af265ecf1b9cb45e042a335f2c5da472ad41eb5d4fda8e31a1607b344726f0f4f9501ef3a3a731cec3784ba93485b44cbdafbf5f13055caa130c703bbd307
+  checksum: 2a07c0b0751c9ceb435c7b107a881080d7b4142fca597ea4701894aeb7c2fec02eeaef094bc28f3d2eaed39f4fc8ef26764c156bf17af93407d723db5608e1e5
   languageName: node
   linkType: hard
 
@@ -10655,13 +10631,6 @@ __metadata:
   version: 2.0.0
   resolution: "require-main-filename@npm:2.0.0"
   checksum: e9e294695fea08b076457e9ddff854e81bffbe248ed34c1eec348b7abbd22a0d02e8d75506559e2265e96978f3c4720bd77a6dad84755de8162b357eb6c778c7
-  languageName: node
-  linkType: hard
-
-"requireindex@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "requireindex@npm:1.2.0"
-  checksum: 50d8b10a1ff1fdf6aea7a1870bc7bd238b0fb1917d8d7ca17fd03afc38a65dcd7a8a4eddd031f89128b5f0065833d5c92c4fef67f2c04e8624057fe626c9cf94
   languageName: node
   linkType: hard
 
@@ -11753,13 +11722,6 @@ __metadata:
   peerDependencies:
     typescript: ">=4.2.0"
   checksum: c746ddabfdffbf16cb0b0db32bb287236a19e583057f8649ee7c49995bb776e1d3ef384685181c11a1a480369e022ca97512cb08c517b2d2bd82c83754c97012
-  languageName: node
-  linkType: hard
-
-"ts-dedent@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "ts-dedent@npm:2.2.0"
-  checksum: 93ed8f7878b6d5ed3c08d99b740010eede6bccfe64bce61c5a4da06a2c17d6ddbb80a8c49c2d15251de7594a4f93ffa21dd10e7be75ef66a4dc9951b4a94e2af
   languageName: node
   linkType: hard
 
