@@ -4,9 +4,16 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
+        margin: 'auto',
+    },
+    title: {
+        fontWeight: '600',
+        fontSize: 24,
+        marginBottom: 20,
     },
     text: {
-        fontWeight: '600',
+        fontWeight: '400',
+        fontSize: 20,
+        marginBottom: 20,
     },
 });

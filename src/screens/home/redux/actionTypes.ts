@@ -1,4 +1,0 @@
-enum TYPES {
-    SET_SPLASH_SCREEN_TEXT_IN_SAGA = 'SET_SPLASH_SCREEN_TEXT_IN_SAGA',
-}
-export default TYPES;

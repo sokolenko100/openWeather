@@ -1,5 +1,5 @@
 package com.openweather
-
+import android.os.Bundle; // add this
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
@@ -8,6 +8,10 @@ import org.devio.rn.splashscreen.SplashScreen;
 
 class MainActivity : ReactActivity() {
 
+  override fun onCreate(savedInstanceState: Bundle?) {
+    SplashScreen.show(this);  // add this
+    super.onCreate(savedInstanceState)
+  }
   /**
    * Returns the name of the main component registered from JavaScript. This is used to schedule
    * rendering of the component.
@@ -20,10 +24,4 @@ class MainActivity : ReactActivity() {
    */
   override fun createReactActivityDelegate(): ReactActivityDelegate =
       DefaultReactActivityDelegate(this, mainComponentName, fabricEnabled)
-
-        @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    SplashScreen.show(this); // Add this here
-    super.onCreate(savedInstanceState);
-  }
 }

@@ -1,2 +1,2 @@
-export * from './navigation';
-export * from './responsive';
+export * from './alert';
+export * from './decorators';
