@@ -74,7 +74,6 @@ export const Home: FC = (): JSX.Element => {
         });
     };
 
-    // Load the city from AsyncStorage when the component mounts
     useEffect(() => {
         getCity();
     }, []);
