@@ -1,9 +1,9 @@
 import { RootNavigator } from '@navigation/root-navigator';
-import { useEffect } from 'react';
+import React, { FC, useEffect } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SplashScreen from 'react-native-splash-screen';
 
-const App = () => {
+const App: FC = (): JSX.Element => {
     useEffect(() => {
         setTimeout(() => {
             SplashScreen.hide();

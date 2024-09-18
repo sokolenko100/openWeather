@@ -1,3 +1,3 @@
 const WEATHER_API_KEY = '3fc28387a5bd77d4bb62bca004082d78';
 
-export {WEATHER_API_KEY};
+export { WEATHER_API_KEY };

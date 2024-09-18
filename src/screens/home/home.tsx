@@ -1,5 +1,6 @@
 import { showPrompt } from '@helpers/alert';
 import { debounce } from '@helpers/decorators';
+import { IWeatherData } from '@interfaces/weather';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
 import React, { FC, useCallback, useEffect, useRef, useState } from 'react';
@@ -11,7 +12,7 @@ export const Home: FC = (): JSX.Element => {
     const [city, setCity] = useState<string>('');
     const [storedCity, setStoredCity] = useState<string | null>(null);
     const [error, setError] = useState<string | null>(null);
-    const [weatherData, setWeatherData] = useState<any>(null);
+    const [weatherData, setWeatherData] = useState<IWeatherData>(null);
     const navigation = useNavigation();
 
     const saveCity = async (cityName: string) => {
@@ -25,7 +26,7 @@ export const Home: FC = (): JSX.Element => {
         }
     };
 
-    const getWeatherData = useCallback(async searchText => {
+    const getWeatherData = useCallback(async (searchText: string) => {
         try {
             const weatherData = await fetchWeatherData(searchText);
             setWeatherData(weatherData);
@@ -36,7 +37,7 @@ export const Home: FC = (): JSX.Element => {
         }
     }, []);
 
-    const getCity = async () => {
+    const getCity = async (): Promise<void> => {
         try {
             const savedCity = await AsyncStorage.getItem('city');
             if (savedCity !== null) {
@@ -48,7 +49,7 @@ export const Home: FC = (): JSX.Element => {
         }
     };
 
-    const handleGoToWeatherDescriptionScreen = () => {
+    const handleGoToWeatherDescriptionScreen = (): void => {
         if (weatherData && city) {
             /* @ts-ignore */
             navigation.navigate('Weather', { city, weatherData });
@@ -56,14 +57,14 @@ export const Home: FC = (): JSX.Element => {
     };
 
     const onChangeText = useRef(
-        debounce((searchText: string) => {
+        debounce((searchText: string): void => {
             if (searchText) {
                 getWeatherData(searchText);
             }
         }, 1500),
     ).current;
 
-    const handleSaveCityName = () => {
+    const handleSaveCityName = (): void => {
         showPrompt({
             title: 'Do you want to save the name of the city?',
             message: 'You can choose by default name without changing input field',
